@@ -17,19 +17,22 @@
   var hiToEn = Object.keys(enToHi).reduce(function (out, key) { out[enToHi[key]] = key; return out; }, {});
   var languageToggle = document.querySelector("[data-language-toggle]");
   var currentLanguage = "en";
+  var originalTextNodes = new WeakMap();
   function translatePage(language) {
     currentLanguage = language === "hi" ? "hi" : "en";
-    var dictionary = currentLanguage === "hi" ? enToHi : hiToEn;
     var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     var nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach(function (node) {
-      var original = node.nodeValue;
+      if (languageToggle && languageToggle.contains(node)) return;
+      if (!originalTextNodes.has(node)) originalTextNodes.set(node, node.nodeValue);
+      var original = originalTextNodes.get(node);
       var trimmed = original.trim();
-      if (!trimmed || !dictionary[trimmed]) return;
-      var start = original.match(/^\\s*/)[0];
-      var end = original.match(/\\s*$/)[0];
-      node.nodeValue = start + dictionary[trimmed] + end;
+      if (!trimmed) return;
+      var translated = currentLanguage === "hi" ? (enToHi[trimmed] || trimmed) : trimmed;
+      var startSpace = original.match(/^\s*/)[0];
+      var endSpace = original.match(/\s*$/)[0];
+      node.nodeValue = startSpace + translated + endSpace;
     });
     document.documentElement.lang = currentLanguage === "hi" ? "hi" : "en";
     if (languageToggle) {
@@ -38,8 +41,9 @@
       languageToggle.setAttribute("aria-pressed", String(currentLanguage === "hi"));
     }
     document.querySelectorAll("[placeholder]").forEach(function (element) {
-      var dict = currentLanguage === "hi" ? enToHi : hiToEn;
-      if (dict[element.getAttribute("placeholder")]) element.setAttribute("placeholder", dict[element.getAttribute("placeholder")]);
+      if (!element.hasAttribute("data-original-placeholder")) element.setAttribute("data-original-placeholder", element.getAttribute("placeholder"));
+      var originalPlaceholder = element.getAttribute("data-original-placeholder");
+      element.setAttribute("placeholder", currentLanguage === "hi" ? (enToHi[originalPlaceholder] || originalPlaceholder) : originalPlaceholder);
     });
     var expander = document.querySelector(".menu-expand-button");
     if (expander) {
