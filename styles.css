@@ -475,3 +475,22 @@ h1 em,h2 em{font-weight:900;font-style:normal;color:#c33725}
 .footer-order-heading{font-size:8px;letter-spacing:.2em;color:#ffce68;margin-top:12px}
 .footer-links a[target="_blank"]{display:inline-flex;align-items:center;gap:5px}
 @media(max-width:760px){.topline{gap:10px;padding:7px 5%}.topline-tools{gap:0}.topline-right{display:none}.language-toggle{min-height:30px;padding:7px 11px;font-size:10px}}
+
+
+/* Polished Sonbhadra wordmark — permanent tomato-red / saffron identity. */
+.brand{gap:12px;min-width:0}
+.brand-mark{width:46px;height:46px;flex:0 0 46px;border:1px solid #ffcf72;border-radius:14px 14px 14px 5px;background:linear-gradient(145deg,#a83224 0%,#7d2119 100%);color:#fff4dc;box-shadow:0 4px 0 rgba(91,29,20,.12),inset 0 1px 0 rgba(255,255,255,.18);font-family:Georgia,serif;font-size:21px;font-weight:700;letter-spacing:-.12em;transition:transform .22s ease,box-shadow .22s ease}
+.brand-mark span{color:#ffcf72;font-size:15px;font-weight:700;margin-left:1px}
+.brand:hover .brand-mark{transform:translateY(-1px) rotate(-3deg);box-shadow:0 6px 12px rgba(91,29,20,.17),inset 0 1px 0 rgba(255,255,255,.18)}
+.brand-copy{gap:3px;letter-spacing:.16em;line-height:1.1}
+.brand-copy strong{font-size:13px;font-weight:800;letter-spacing:.17em;color:#922a1e}
+.brand-copy small{display:flex;align-items:center;gap:6px;font-size:8px;font-weight:700;letter-spacing:.24em;color:#80675b;margin-top:2px;white-space:nowrap}
+.brand-copy small i{font-style:normal;color:#d99520;font-size:11px}
+@media(max-width:760px){
+  .brand{gap:9px}
+  .brand-mark{width:39px;height:39px;flex-basis:39px;border-radius:12px 12px 12px 4px;font-size:18px}
+  .brand-mark span{font-size:13px}
+  .brand-copy strong{font-size:11px;letter-spacing:.14em}
+  .brand-copy small{font-size:7px;letter-spacing:.19em;gap:4px}
+}
+@media(prefers-reduced-motion:reduce){.brand-mark,.brand:hover .brand-mark{transition:none;transform:none}}
