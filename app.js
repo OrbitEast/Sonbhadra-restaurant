@@ -79,7 +79,7 @@
       var expanded = menuExpandButton.getAttribute("aria-expanded") === "true";
       menuExpandButton.setAttribute("aria-expanded", String(!expanded));
       menuExpandButton.classList.toggle("is-expanded", !expanded);
-      menuExpandButton.querySelector("span").textContent = expanded ? "VIEW FULL MENU" : "SHOW LESS";
+      menuExpandButton.querySelector("span").textContent = expanded ? "SHOW LESS" : "VIEW FULL MENU";
       menuExpandButton.querySelector("b").textContent = expanded ? "+" : "−";
       applyFilter(document.querySelector(".filter-tab.is-active")?.getAttribute("data-filter") || "all");
     });
