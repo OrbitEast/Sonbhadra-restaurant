@@ -446,7 +446,6 @@ h1 em,h2 em{font-weight:900;font-style:normal;color:#c33725}
 .page-hero h1 em{color:#ffca56;font-style:normal;font-weight:900}
 .story-copy h2 em,.visit-copy h2 em,.experience-copy h2 em{color:#c33725;font-style:normal;font-weight:900}
 
-
 /* Expandable restaurant menu: retain the full-menu interaction with the warm red/yellow theme. */
 .menu-expand-button{width:100%;margin:26px 0 0;padding:15px 18px;border:1px solid #edc98f;border-radius:999px;background:#fff0d7;color:var(--forest);display:flex;align-items:center;justify-content:center;gap:12px;font-size:9px;font-weight:800;letter-spacing:.16em;transition:background .22s,border-color .22s,transform .22s,box-shadow .22s}
 .menu-expand-button:hover{background:#ffdf9b;border-color:#ffbd3f;box-shadow:0 6px 18px #922a1e12;transform:translateY(-1px)}
