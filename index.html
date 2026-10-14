@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18251e">
+  <meta name="description" content="A thoughtful dining experience in Sonbhadra. Explore the menu and reserve your table at Sonbhadra Restaurant.">
+  <title>Sonbhadra Restaurant — A Table Worth Gathering Around</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="topline"><span>GOOD FOOD. GOOD COMPANY.</span><span class="topline-right">SONBHADRA · UTTAR PRADESH</span></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Sonbhadra Restaurant home">
+      <span class="brand-mark">S<span>R</span></span>
+      <span class="brand-copy"><strong>SONBHADRA</strong><small>RESTAURANT</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#menu">The Menu</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#visit">Find Us</a>
+      <button class="button button-small button-gold js-book" type="button">Reserve a Table <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=88" alt="Warm, candlelit restaurant table set for dinner" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow eyebrow-light"><span></span> A PLACE AT THE TABLE</p>
+        <h1 id="hero-title">Come for the food.<br><em>Stay for the feeling.</em></h1>
+        <p class="hero-lede">Thoughtful flavours, warm hospitality, and a table that always feels like yours.</p>
+        <div class="hero-actions">
+          <button class="button button-gold js-book" type="button">Reserve your table <span aria-hidden="true">↗</span></button>
+          <a class="text-link text-link-light" href="#menu">Explore the menu <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-foot"><span>01 — AN INVITATION TO SLOW DOWN</span><span class="hero-scroll">SCROLL TO DISCOVER <b>↓</b></span></div>
+      <div class="hero-seal" aria-hidden="true"><span>MADE FOR</span><strong>GOOD<br>GATHERINGS</strong><i>✳</i></div>
+    </section>
+
+    <section class="intro-strip" aria-label="Our approach">
+      <div><span class="strip-number">01</span><p><strong>Made with care</strong><small>Thoughtful food, every day</small></p></div>
+      <div><span class="strip-number">02</span><p><strong>Warm by nature</strong><small>Hospitality that feels personal</small></p></div>
+      <div><span class="strip-number">03</span><p><strong>Always welcome</strong><small>For little moments and big ones</small></p></div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow"><span></span> SOMETHING FOR EVERY APPETITE</p><h2>Made to be <em>savoured.</em></h2></div>
+        <p class="heading-note">Familiar favourites, full-hearted comfort, and little reasons to order one more thing.</p>
+      </div>
+      <div class="menu-toolbar reveal">
+        <div class="filter-tabs" role="group" aria-label="Filter menu">
+          <button class="filter-tab is-active" type="button" data-filter="all" aria-pressed="true">All favourites</button>
+          <button class="filter-tab" type="button" data-filter="veg" aria-pressed="false">Vegetarian</button>
+          <button class="filter-tab" type="button" data-filter="nonveg" aria-pressed="false">Non-vegetarian</button>
+          <button class="filter-tab" type="button" data-filter="bites" aria-pressed="false">Fast bites</button>
+        </div>
+        <span class="menu-note">SAMPLE MENU · ITEMS & PRICES TO CONFIRM</span>
+      </div>
+      <div class="menu-grid">
+        <article class="dish-card reveal" data-category="veg">
+          <div class="dish-image"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=82" alt="Indian vegetarian meal served with rich curries" loading="lazy"><span class="dish-tag">VEGETARIAN</span></div>
+          <div class="dish-meta"><div><h3>Paneer Makhani</h3><p>Silky tomato gravy, warming spices, a finish of cream.</p></div><span class="dish-price">₹—</span></div>
+        </article>
+        <article class="dish-card reveal" data-category="nonveg">
+          <div class="dish-image"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=82" alt="Indian curry served with fresh herbs and spices" loading="lazy"><span class="dish-tag">NON-VEG</span></div>
+          <div class="dish-meta"><div><h3>House Chicken Curry</h3><p>Slow-simmered comfort with a deep, aromatic masala.</p></div><span class="dish-price">₹—</span></div>
+        </article>
+        <article class="dish-card reveal" data-category="bites">
+          <div class="dish-image"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=82" alt="Freshly baked flatbread with colourful toppings" loading="lazy"><span class="dish-tag">FAST BITES</span></div>
+          <div class="dish-meta"><div><h3>Loaded Garden Pizza</h3><p>Crisp base, colourful toppings, and a generous melt.</p></div><span class="dish-price">₹—</span></div>
+        </article>
+        <article class="dish-card reveal" data-category="veg">
+          <div class="dish-image"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=82" alt="A richly coloured Indian curry dish" loading="lazy"><span class="dish-tag">VEGETARIAN</span></div>
+          <div class="dish-meta"><div><h3>Seasonal Veg Thali</h3><p>A comforting spread of seasonal favourites and sides.</p></div><span class="dish-price">₹—</span></div>
+        </article>
+        <article class="dish-card reveal" data-category="nonveg">
+          <div class="dish-image"><img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=82" alt="Crispy golden chicken pieces served as a sharing dish" loading="lazy"><span class="dish-tag">NON-VEG</span></div>
+          <div class="dish-meta"><div><h3>Golden Chicken Bites</h3><p>Crunchy, savoury, and made for sharing at the table.</p></div><span class="dish-price">₹—</span></div>
+        </article>
+        <article class="dish-card reveal" data-category="bites">
+          <div class="dish-image"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=82" alt="Toasted sandwich with fresh filling" loading="lazy"><span class="dish-tag">FAST BITES</span></div>
+          <div class="dish-meta"><div><h3>Grilled House Sandwich</h3><p>Toasted until golden, layered with a fresh, hearty filling.</p></div><span class="dish-price">₹—</span></div>
+        </article>
+      </div>
+      <div class="menu-bottom reveal"><p>These are sample dishes for the first design preview. The final menu will reflect the restaurant's actual kitchen.</p><button class="button button-outline js-book" type="button">Plan your visit <span aria-hidden="true">↗</span></button></div>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="story-photo reveal">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1300&q=86" alt="An intimate restaurant interior prepared for guests" loading="lazy">
+        <div class="photo-caption"><span>THE ART OF MAKING ROOM</span><span>SONBHADRA, INDIA</span></div>
+      </div>
+      <div class="story-copy reveal">
+        <p class="eyebrow"><span></span> A LITTLE ABOUT US</p>
+        <h2>Good food is only<br>the <em>beginning.</em></h2>
+        <p>Some of the best memories begin around a table. We believe the setting should feel considered, the welcome should feel genuine, and the food should give everyone a reason to linger.</p>
+        <p>Sonbhadra Restaurant is being shaped around that simple idea: make people feel welcome, and give every gathering a little more meaning.</p>
+        <a class="text-link" href="about.html">Get to know us <span aria-hidden="true">↗</span></a>
+        <span class="story-ornament" aria-hidden="true">S<span>R</span></span>
+      </div>
+    </section>
+
+    <section class="gallery-section section" id="gallery">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow"><span></span> A GLIMPSE OF THE EXPERIENCE</p><h2>Details make the <em>difference.</em></h2></div>
+        <p class="heading-note">A little atmosphere, a beautifully set table, and food worth sharing.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-tall reveal"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" alt="Warm restaurant dining room" loading="lazy"><figcaption><span>01</span> THE SETTING</figcaption></figure>
+        <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=85" alt="Freshly prepared colourful food" loading="lazy"><figcaption><span>02</span> FRESH ON THE TABLE</figcaption></figure>
+        <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?auto=format&fit=crop&w=900&q=85" alt="A carefully prepared restaurant dish" loading="lazy"><figcaption><span>03</span> MADE WITH CARE</figcaption></figure>
+      </div>
+      <p class="gallery-disclaimer">Preview photography only. Actual restaurant photos can be added before launch.</p>
+    </section>
+
+    <section class="experience-band">
+      <div class="experience-image"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1500&q=85" alt="Evening restaurant ambience with warm lights" loading="lazy"></div>
+      <div class="experience-overlay"></div>
+      <div class="experience-copy reveal"><p class="eyebrow eyebrow-light"><span></span> MAKE A MOMENT OF IT</p><h2>Your seat is<br><em>waiting.</em></h2><p>Birthday dinner, an unhurried lunch, or an evening with your favourite people. Start with a reservation and let the rest take shape.</p><button class="button button-gold js-book" type="button">Book your table <span aria-hidden="true">↗</span></button></div>
+      <div class="experience-index">A BETTER KIND OF GATHERING · 02</div>
+    </section>
+
+    <section class="visit-section section" id="visit">
+      <div class="visit-copy reveal">
+        <p class="eyebrow"><span></span> COME FIND YOUR TABLE</p>
+        <h2>Easy to find.<br><em>Hard to forget.</em></h2>
+        <p>We look forward to welcoming you to Sonbhadra. The exact address and opening hours will be added once confirmed.</p>
+        <div class="visit-detail"><span class="detail-icon">⌖</span><div><small>OUR LOCATION</small><strong>Sonbhadra, Uttar Pradesh, India</strong></div></div>
+        <div class="visit-detail"><span class="detail-icon">◷</span><div><small>OPENING HOURS</small><strong>Hours to be confirmed</strong></div></div>
+        <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&query=Sonbhadra%2C+Uttar+Pradesh" target="_blank" rel="noopener">Get directions <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="map-frame reveal"><iframe title="Map of Sonbhadra, Uttar Pradesh" src="https://maps.google.com/maps?q=Sonbhadra%2C%20Uttar%20Pradesh&t=&z=10&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><span class="map-label">SONBHADRA · UTTAR PRADESH</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand brand-footer" href="#top"><span class="brand-mark">S<span>R</span></span><span class="brand-copy"><strong>SONBHADRA</strong><small>RESTAURANT</small></span></a>
+      <p>Thoughtful food.<br>Warm welcomes.<br>Room for everyone.</p>
+      <div class="footer-links"><strong>EXPLORE</strong><a href="#menu">The Menu</a><a href="about.html">Our Story</a><a href="kitchen.html">Our Kitchen</a><a href="team.html">People & Hospitality</a></div>
+      <div class="footer-booking"><strong>YOUR TABLE IS CALLING</strong><p>Make your next meal a moment to remember.</p><button class="text-link text-link-light js-book" type="button">Reserve a table <span aria-hidden="true">↗</span></button></div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year></span> SONBHADRA RESTAURANT</span><span>MADE FOR GOOD GATHERINGS</span><a href="#top">BACK TO TOP ↑</a></div>
+    <p class="demo-note">Website preview · Replace sample menu, photography, address, opening hours and contact details before launch.</p>
+  </footer>
+
+  <div class="booking-modal" id="booking-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="booking-card" role="dialog" aria-modal="true" aria-labelledby="booking-title" aria-describedby="booking-description">
+      <button class="modal-close" type="button" aria-label="Close booking form" data-close-modal>×</button>
+      <p class="eyebrow"><span></span> A PLACE FOR YOU</p>
+      <h2 id="booking-title">Let's save you<br><em>a table.</em></h2>
+      <p id="booking-description" class="modal-intro">Share a few details. We'll prepare a WhatsApp message for the restaurant so you can confirm your reservation directly.</p>
+      <form id="booking-form">
+        <div class="form-row"><label>Your name<input name="guestName" type="text" autocomplete="name" placeholder="Full name" required maxlength="80"></label><label>Phone number<input name="guestPhone" type="tel" autocomplete="tel" placeholder="+91 ..." required maxlength="18" pattern="[+0-9 ()-]{7,18}" title="Enter a valid phone number"></label></div>
+        <div class="form-row"><label>Date<input name="date" id="booking-date" type="date" required></label><label>Preferred time<select name="time" required><option value="">Choose a time</option><option>12:00 PM</option><option>12:30 PM</option><option>1:00 PM</option><option>1:30 PM</option><option>2:00 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option></select></label></div>
+        <label>Number of guests<select name="guests" required><option value="1">1 guest</option><option value="2" selected>2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option><option value="7">7 guests</option><option value="8">8 guests</option><option value="9">9 guests</option><option value="10">10 guests</option></select></label>
+        <button class="button button-dark form-submit" type="submit">Continue to WhatsApp <span aria-hidden="true">↗</span></button>
+        <p class="form-footnote">Your booking is confirmed directly with the restaurant on WhatsApp.</p>
+      </form>
+    </section>
+  </div>
+  <div class="toast" id="site-toast" role="status" aria-live="polite"></div>
+</body>
+</html>
