@@ -134,6 +134,42 @@
     revealItems.forEach(function (item) { observer.observe(item); });
   }
 
+
+  var menuChoices = document.querySelectorAll("[data-menu-choice]");
+  var menuPanels = document.querySelectorAll("[data-menu-panel]");
+  var restaurantToolbar = document.querySelector("[data-restaurant-toolbar]");
+  function selectMenu(name) {
+    menuChoices.forEach(function (choice) {
+      var selected = choice.getAttribute("data-menu-choice") === name;
+      choice.classList.toggle("is-active", selected);
+      choice.setAttribute("aria-pressed", String(selected));
+    });
+    menuPanels.forEach(function (panel) {
+      var selected = panel.getAttribute("data-menu-panel") === name;
+      panel.hidden = !selected;
+      panel.classList.toggle("is-active", selected);
+    });
+    if (restaurantToolbar) restaurantToolbar.hidden = name !== "restaurant";
+    if (name === "restaurant") {
+      filterButtons.forEach(function (button) {
+        var selected = button.getAttribute("data-filter") === "all";
+        button.classList.toggle("is-active", selected);
+        button.setAttribute("aria-pressed", String(selected));
+      });
+      dishes.forEach(function (dish) { dish.hidden = false; });
+    }
+  }
+  menuChoices.forEach(function (choice) {
+    choice.addEventListener("click", function () {
+      selectMenu(choice.getAttribute("data-menu-choice"));
+    });
+  });
+  document.querySelectorAll("[data-open-bar-menu]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      selectMenu("bar");
+    });
+  });
+
   var filterButtons = document.querySelectorAll("[data-filter]");
   var dishes = document.querySelectorAll(".dish-card[data-category]");
   filterButtons.forEach(function (button) {
