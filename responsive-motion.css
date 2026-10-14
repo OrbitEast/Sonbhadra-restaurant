@@ -52,3 +52,6 @@ button, .button, .filter-tab, .menu-choice, .menu-expand-button { touch-action: 
 .language-dust:nth-child(3n + 1){width:2px;height:2px;background:#ffdf9b}
 @keyframes languageDustFloat{0%{opacity:0;transform:translate3d(0,0,0) scale(.6)}18%{opacity:.8}100%{opacity:0;transform:translate3d(var(--dust-x),var(--dust-y),0) scale(.2)}}
 @media(prefers-reduced-motion:reduce){.language-toggle.is-switching,.language-text-shift,.language-dust{animation:none!important}.language-dust{display:none!important}}
+
+/* Language-toggle particle effects are disabled with the language option removed. */
+.language-dust-layer,.language-dust,.language-text-shift{animation:none!important;}
