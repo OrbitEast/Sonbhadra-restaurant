@@ -38,3 +38,17 @@ button, .button, .filter-tab, .menu-choice, .menu-expand-button { touch-action: 
   }
   .reveal, .reveal.is-visible { opacity: 1 !important; transform: none !important; }
 }
+
+
+/* Compact language pill + short-lived dust transition (transform/opacity only). */
+.language-toggle{position:relative;isolation:isolate;transform-origin:center;box-shadow:0 2px 0 rgba(53,24,17,.14)}
+.language-toggle.is-switching{animation:languagePillPop .32s cubic-bezier(.2,.8,.25,1)}
+@keyframes languagePillPop{0%{transform:scale(1)}42%{transform:scale(1.09) translateY(-1px)}72%{transform:scale(.98)}100%{transform:scale(1)}}
+.language-text-shift{animation:languageTextShift .3s ease-out}
+@keyframes languageTextShift{0%{opacity:.58;transform:translateY(1px)}45%{opacity:.82;transform:translateY(-1px)}100%{opacity:1;transform:translateY(0)}}
+.language-dust-layer{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:9999}
+.language-dust{position:absolute;width:3px;height:3px;border-radius:50%;background:#ffbd3f;opacity:0;will-change:transform,opacity;animation:languageDustFloat .42s ease-out forwards}
+.language-dust:nth-child(3n){width:2px;height:2px;background:#922a1e}
+.language-dust:nth-child(3n + 1){width:2px;height:2px;background:#ffdf9b}
+@keyframes languageDustFloat{0%{opacity:0;transform:translate3d(0,0,0) scale(.6)}18%{opacity:.8}100%{opacity:0;transform:translate3d(var(--dust-x),var(--dust-y),0) scale(.2)}}
+@media(prefers-reduced-motion:reduce){.language-toggle.is-switching,.language-text-shift,.language-dust{animation:none!important}.language-dust{display:none!important}}
