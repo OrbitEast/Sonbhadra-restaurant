@@ -1,0 +1,182 @@
+/* Responsive recovery + lightweight food-focused motion.
+   Loaded after styles.css so existing content/features remain unchanged. */
+:root { scroll-padding-top: 78px; }
+html { -webkit-text-size-adjust: 100%; }
+body { overflow-x: clip; }
+img { max-width: 100%; }
+button, a, input, select { -webkit-tap-highlight-color: transparent; }
+button, .button, .filter-tab, .menu-choice, .menu-expand-button { touch-action: manipulation; }
+
+/* Small, elegant reveals; app.js already adds .is-visible via IntersectionObserver. */
+.reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1); }
+.reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+.dish-card.reveal:not(.is-visible) { animation: none; }
+.dish-card.reveal.is-visible { animation: menuCardIn .38s ease both; }
+.section-heading.reveal { transition-delay: .04s; }
+.menu-choice-grid.reveal { transition-delay: .08s; }
+.dish-card.reveal:nth-child(3n + 2) { transition-delay: .06s; }
+.dish-card.reveal:nth-child(3n) { transition-delay: .11s; }
+.gallery-item.reveal:nth-child(2n) { transition-delay: .07s; }
+.hero-content { animation: cravingRise .72s .08s both; }
+.hero-image { will-change: transform; }
+.dish-image img, .gallery-item img, .story-photo img, .experience-image img { backface-visibility: hidden; }
+@keyframes cravingRise { from { opacity: 0; transform: translate3d(0,16px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
+@media (hover:hover) and (pointer:fine) {
+  .dish-card:hover { transform: translateY(-3px); }
+  .dish-card:hover .dish-image img { transform: scale(1.045); }
+  .gallery-item:hover img { transform: scale(1.045); }
+  .menu-choice:hover { transform: translateY(-3px); }
+  .button:hover { transform: translateY(-2px); }
+}
+.menu-choice, .dish-card, .button, .menu-expand-button { transition-timing-function: cubic-bezier(.2,.7,.2,1); }
+
+/* Tablet / small laptop */
+@media (max-width: 900px) {
+  .site-header { padding: 14px 5%; }
+  .site-header.is-scrolled { padding-top: 11px; padding-bottom: 11px; }
+  .brand { gap: 8px; }
+  .brand-mark { width: 36px; height: 36px; font-size: 16px; }
+  .brand-copy strong { font-size: 10px; }
+  .brand-copy small { font-size: 7px; }
+  .main-nav { gap: 16px; }
+  .main-nav > a { font-size: 10px; }
+  .main-nav .button { min-height: 40px; padding: 10px 12px; gap: 10px; }
+  .hero { min-height: 590px; height: min(78vw, 720px); }
+  .hero-content { width: min(650px, 78%); margin-left: 6%; padding: 60px 0 76px; }
+  .hero h1 { font-size: clamp(43px, 6.2vw, 68px); }
+  .hero-seal { width: 105px; height: 105px; right: 5%; bottom: 9%; }
+  .intro-strip { padding: 23px 4%; }
+  .intro-strip > div { padding: 0 14px; gap: 10px; }
+  .section { padding-left: 5%; padding-right: 5%; }
+  .menu-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px 16px; }
+  .dish-image { height: clamp(155px, 25vw, 210px); }
+  .story-section { grid-template-columns: 1fr 1fr; min-height: 0; }
+  .story-photo { min-height: 420px; }
+  .story-copy { padding: 48px 7%; }
+  .gallery-grid { gap: 12px; }
+  .gallery-item { height: 230px; }
+  .gallery-tall { height: 350px; }
+  .experience-band { min-height: 480px; padding-left: 7%; padding-right: 7%; }
+  .visit-section { grid-template-columns: .9fr 1.1fr; gap: 28px; }
+  .map-frame { height: 350px; }
+  .footer-main { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 30px 24px; }
+}
+
+/* Android + iPhone portrait */
+@media (max-width: 720px) {
+  html { scroll-padding-top: 70px; }
+  .topline { min-height: 26px; padding: 6px 4%; font-size: 7px; letter-spacing: .12em; gap: 8px; }
+  .topline-right { text-align: right; }
+  .site-header, .site-header.is-scrolled { min-height: 62px; padding: 10px 4.5%; gap: 10px; }
+  .brand { min-width: 0; gap: 7px; }
+  .brand-mark { width: 34px; height: 34px; font-size: 15px; }
+  .brand-copy { letter-spacing: .13em; }
+  .brand-copy strong { font-size: 9px; }
+  .brand-copy small { margin-top: 3px; font-size: 7px; letter-spacing: .2em; }
+  .menu-toggle { display: block; flex: 0 0 auto; min-width: 44px; min-height: 44px; padding: 8px 7px; }
+  .menu-toggle span { width: 23px; margin: 6px auto; transition: transform .22s ease, opacity .22s ease; }
+  .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+  .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 40; padding: 12px 4.5% 18px; background: rgba(251,249,244,.985); border-bottom: 1px solid var(--line); box-shadow: 0 16px 28px rgba(24,37,30,.12); flex-direction: column; align-items: stretch; gap: 0; }
+  .main-nav.is-open { display: flex; }
+  .main-nav > a { display: flex; align-items: center; min-height: 46px; padding: 8px 2px; font-size: 13px; border-bottom: 1px solid rgba(32,42,34,.08); }
+  .main-nav .button { width: 100%; margin-top: 12px; min-height: 46px; justify-content: center; font-size: 11px; }
+  .hero { min-height: 590px; height: min(790px, calc(100svh - 88px)); max-height: 720px; }
+  .hero-image { object-position: 58% center; }
+  .hero-shade { background: linear-gradient(90deg, rgba(12,18,13,.78), rgba(12,18,13,.4) 68%, rgba(12,18,13,.22)); }
+  .hero-content { width: 88%; margin-left: 5.5%; padding: 44px 0 70px; }
+  .hero .eyebrow { font-size: 8px; letter-spacing: .15em; margin-bottom: 15px; }
+  .hero h1 { max-width: 570px; font-size: clamp(40px, 10.5vw, 58px); line-height: 1.04; letter-spacing: -.035em; }
+  .hero-lede { max-width: 330px; font-size: 13px; line-height: 1.7; }
+  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 23px; }
+  .hero-actions .button { min-height: 44px; padding: 12px 14px; gap: 12px; font-size: 10px; }
+  .hero-actions .text-link { font-size: 10px; }
+  .hero-foot { margin-top: 32px; }
+  .hero-seal { width: 76px; height: 76px; right: 5%; bottom: 5%; opacity: .85; }
+  .hero-seal span { font-size: 6px; letter-spacing: .12em; }
+  .hero-seal strong { font-size: 11px; }
+  .intro-strip { grid-template-columns: 1fr; padding: 12px 5%; }
+  .intro-strip > div, .intro-strip > div:first-child { padding: 10px 0; border-right: 0; border-bottom: 1px solid #d6ccbd; gap: 12px; }
+  .intro-strip > div:last-child { border-bottom: 0; }
+  .strip-number { font-size: 10px; }
+  .intro-strip p { margin: 0; font-size: 11px; }
+  .section { padding: 60px 5%; }
+  .section-heading { display: block; margin-bottom: 25px; }
+  .section-heading h2, .story-copy h2, .visit-copy h2 { font-size: clamp(32px, 8.5vw, 44px); line-height: 1.1; }
+  .eyebrow { font-size: 8px; letter-spacing: .17em; margin-bottom: 14px; }
+  .heading-note { max-width: none; margin-top: 12px; font-size: 11px; }
+  .menu-choice-grid { grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; }
+  .menu-choice { min-height: 185px; padding: 21px; }
+  .menu-choice-title { font-size: clamp(27px, 7.5vw, 34px); }
+  .menu-choice-desc { max-width: 270px; font-size: 10px; }
+  .menu-toolbar { align-items: stretch; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+  .filter-tabs { display: flex; flex-wrap: nowrap; width: calc(100% + 5vw); max-width: calc(100% + 5vw); margin-right: -5vw; overflow-x: auto; gap: 7px; padding: 0 5vw 8px 0; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+  .filter-tab { flex: 0 0 auto; min-height: 38px; padding: 9px 12px; font-size: 9px; scroll-snap-align: start; }
+  .menu-note { text-align: left; font-size: 9px; }
+  .menu-grid, .menu-panel .menu-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 23px 12px; }
+  .dish-image { height: clamp(125px, 39vw, 180px); }
+  .dish-tag { top: 8px; left: 8px; padding: 5px 6px; font-size: 7px; }
+  .dish-meta { gap: 6px; padding-top: 10px; }
+  .dish-meta h3 { font-size: clamp(13px, 3.7vw, 16px); line-height: 1.25; }
+  .dish-meta p { font-size: 9px; line-height: 1.55; }
+  .dish-price { font-size: 14px; }
+  .menu-bottom { align-items: stretch; flex-direction: column; gap: 14px; margin-top: 23px; }
+  .menu-bottom .button { width: 100%; }
+  .menu-expand-button { margin-top: 22px; min-height: 46px; padding: 13px 14px; font-size: 8px; }
+  .story-section { grid-template-columns: 1fr; }
+  .story-photo { min-height: 0; height: clamp(270px, 72vw, 390px); }
+  .story-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .photo-caption { padding: 14px 5%; font-size: 7px; }
+  .story-copy { padding: 38px 5% 44px; }
+  .story-copy p { font-size: 12px; }
+  .story-ornament { display: none; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .gallery-item { height: clamp(140px, 42vw, 190px); }
+  .gallery-tall { grid-row: span 2; height: auto; min-height: 290px; }
+  .gallery-item figcaption { padding: 10px; gap: 6px; font-size: 8px; }
+  .gallery-disclaimer { font-size: 9px; }
+  .experience-band { min-height: 420px; padding: 52px 6%; }
+  .experience-copy { max-width: 520px; }
+  .experience-copy h2 { font-size: clamp(34px, 9vw, 48px); line-height: 1.08; }
+  .experience-copy p { font-size: 12px; }
+  .visit-section { grid-template-columns: 1fr; gap: 25px; }
+  .visit-copy > p:not(.eyebrow) { font-size: 12px; }
+  .visit-detail strong { font-size: 11px; }
+  .map-frame { height: 300px; }
+  .map-frame-heading { top: 10px; left: 10px; right: 10px; padding: 10px 12px; }
+  .map-frame-heading strong { font-size: 20px; }
+  .map-label { left: 10px; bottom: 10px; }
+  .directions-card { padding: 20px; }
+  .site-footer { padding: 40px 5% 18px; }
+  .footer-main { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 25px 16px; padding-bottom: 30px; }
+  .footer-main > p { font-size: 17px; }
+  .footer-contact, .footer-booking, .footer-links { min-width: 0; font-size: 10px; }
+  .footer-bottom { gap: 8px; flex-wrap: wrap; font-size: 8px; }
+  .booking-modal { padding: 10px; align-items: end; }
+  .booking-card { width: 100%; max-height: calc(100dvh - 20px); padding: 26px 20px 22px; overflow-y: auto; overscroll-behavior: contain; }
+  .booking-card h2 { font-size: clamp(29px, 8vw, 38px); }
+  .form-row { grid-template-columns: 1fr; gap: 12px; }
+  .booking-card input, .booking-card select { min-height: 46px; width: 100%; }
+  .form-submit { width: 100%; min-height: 48px; }
+}
+
+/* Very narrow phones */
+@media (max-width: 380px) {
+  .topline { font-size: 6px; letter-spacing: .08em; }
+  .brand-copy strong { font-size: 8px; }
+  .hero { min-height: 560px; }
+  .hero h1 { font-size: clamp(37px, 10.5vw, 43px); }
+  .hero-seal { width: 64px; height: 64px; }
+  .menu-grid, .menu-panel .menu-grid { gap: 20px 9px; }
+  .dish-image { height: 125px; }
+  .dish-meta h3 { font-size: 13px; }
+  .dish-meta p { font-size: 8px; }
+  .dish-price { font-size: 13px; }
+  .footer-main { gap: 22px 12px; }
+}
+
+/* Keep all interactions usable without motion when requested by the device. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal, .reveal.is-visible { opacity: 1 !important; transform: none !important; }
+}
