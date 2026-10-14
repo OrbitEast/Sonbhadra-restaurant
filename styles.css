@@ -464,3 +464,13 @@ h1 em,h2 em{font-weight:900;font-style:normal;color:#c33725}
  .menu-expand-button{min-height:46px;margin-top:20px;padding:13px 15px;font-size:8px}
 }
 @media(prefers-reduced-motion:reduce){.dish-card{animation:none}}
+
+
+/* Persistent English/Hindi switch; stays visible on narrow screens. */
+.topline-tools{display:flex;align-items:center;gap:18px}
+.language-toggle{appearance:none;border:1px solid #ffbd3f;border-radius:999px;background:#351811;color:#ffdf9b;padding:6px 12px;min-height:29px;font:700 10px/1 var(--sans);letter-spacing:.04em;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,transform .2s}
+.language-toggle:hover{background:#ffbd3f;color:#351811}
+.language-toggle:active{transform:scale(.97)}
+.footer-order-heading{font-size:8px;letter-spacing:.2em;color:#ffce68;margin-top:12px}
+.footer-links a[target="_blank"]{display:inline-flex;align-items:center;gap:5px}
+@media(max-width:760px){.topline{gap:10px;padding:7px 5%}.topline-tools{gap:0}.topline-right{display:none}.language-toggle{min-height:30px;padding:7px 11px;font-size:10px}}
