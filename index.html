@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#18251e">
-  <meta name="description" content="A thoughtful dining experience in Sonbhadra. Explore the menu and reserve your table at Sonbhadra Restaurant.">
+  <meta name="description" content="Discover Sonbhadra Restaurant & Bar: thoughtful Indian dining, crafted drinks, and warm hospitality in one memorable setting.">
   <title>Sonbhadra Restaurant — A Table Worth Gathering Around</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
     </a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="#menu">The Menu</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#bar">Bar &amp; Lounge</a><a href="#visit">Find Us</a>
+      <a href="#menu">Explore Menus</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#visit">Find Us</a>
       <button class="button button-small button-gold js-book" type="button">Book Now <span aria-hidden="true">↗</span></button>
     </nav>
   </header>
@@ -31,38 +31,39 @@
       <img class="hero-image" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=88" alt="Warm, candlelit restaurant table set for dinner" fetchpriority="high">
       <div class="hero-shade"></div>
       <div class="hero-content">
-        <p class="eyebrow eyebrow-light"><span></span> A PLACE AT THE TABLE</p>
-        <h1 id="hero-title">Come for the food.<br><em>Stay for the feeling.</em></h1>
-        <p class="hero-lede">Thoughtful flavours, warm hospitality, and a table that always feels like yours.</p>
+        <p class="eyebrow eyebrow-light"><span></span> RESTAURANT · BAR · GOOD COMPANY</p>
+        <h1 id="hero-title">Good food.<br><em>Great drinks.</em><br>One good place.</h1>
+        <p class="hero-lede">A thoughtful restaurant for memorable meals, and a welcoming bar for evenings that deserve to last a little longer.</p>
         <div class="hero-actions">
           <button class="button button-gold js-book" type="button">Book Now <span aria-hidden="true">↗</span></button>
-          <a class="text-link text-link-light" href="#menu">Explore the menu <span aria-hidden="true">↓</span></a>
+          <a class="text-link text-link-light" href="#menu">Explore restaurant &amp; bar menus <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <div class="hero-foot"><span>01 — AN INVITATION TO SLOW DOWN</span><span class="hero-scroll">SCROLL TO DISCOVER <b>↓</b></span></div>
-      <div class="hero-seal" aria-hidden="true"><span>MADE FOR</span><strong>GOOD<br>GATHERINGS</strong><i>✳</i></div>
+      <div class="hero-seal" aria-hidden="true"><span>ONE ADDRESS</span><strong>DINING<br>&amp; DRINKS</strong><i>✳</i></div>
     </section>
 
     <section class="intro-strip" aria-label="Our approach">
-      <div><span class="strip-number">01</span><p><strong>Made with care</strong><small>Thoughtful food, every day</small></p></div>
-      <div><span class="strip-number">02</span><p><strong>Warm by nature</strong><small>Hospitality that feels personal</small></p></div>
-      <div><span class="strip-number">03</span><p><strong>Always welcome</strong><small>For little moments and big ones</small></p></div>
+      <div><span class="strip-number">01</span><p><strong>Restaurant</strong><small>Comforting flavours &amp; fresh favourites</small></p></div>
+      <div><span class="strip-number">02</span><p><strong>Bar &amp; Lounge</strong><small>Signature serves &amp; zero-proof choices</small></p></div>
+      <div><span class="strip-number">03</span><p><strong>One good evening</strong><small>Food, drinks &amp; company together</small></p></div>
     </section>
 
     <section class="section menu-section" id="menu">
       <div class="section-heading reveal">
-        <div><p class="eyebrow"><span></span> SOMETHING FOR EVERY APPETITE</p><h2>Made to be <em>savoured.</em></h2></div>
-        <p class="heading-note">Familiar favourites, full-hearted comfort, and little reasons to order one more thing.</p>
+        <div><p class="eyebrow"><span></span> EXPLORE OUR MENUS</p><h2>What are you <em>in the mood for?</em></h2></div>
+        <p class="heading-note">Choose the restaurant for a proper meal, or the bar for a relaxed drink and something to share.</p>
       </div>
-      <div class="menu-toolbar reveal">
-        <div class="filter-tabs" role="group" aria-label="Filter menu">
-          <button class="filter-tab is-active" type="button" data-filter="all" aria-pressed="true">All favourites</button>
-          <button class="filter-tab" type="button" data-filter="veg" aria-pressed="false">Vegetarian</button>
-          <button class="filter-tab" type="button" data-filter="nonveg" aria-pressed="false">Non-vegetarian</button>
-          <button class="filter-tab" type="button" data-filter="bites" aria-pressed="false">Fast bites</button>
-        </div>
-        <span class="menu-note">SAMPLE MENU · ITEMS & PRICES TO CONFIRM</span>
+      <div class="menu-choice-grid reveal" role="group" aria-label="Choose a menu">
+        <button class="menu-choice is-active" type="button" data-menu-choice="restaurant" aria-pressed="true"><span class="menu-choice-number">01 / THE KITCHEN</span><span class="menu-choice-title">Restaurant Menu <b aria-hidden="true">↗</b></span><span class="menu-choice-desc">Indian favourites, hearty plates &amp; casual bites.</span><span class="menu-choice-action">EXPLORE FOOD MENU</span></button>
+        <button class="menu-choice menu-choice-bar" type="button" data-menu-choice="bar" aria-pressed="false"><span class="menu-choice-number">02 / THE BAR</span><span class="menu-choice-title">Bar Menu <b aria-hidden="true">↗</b></span><span class="menu-choice-desc">Signature drinks, refreshing coolers &amp; small plates.</span><span class="menu-choice-action">EXPLORE DRINKS MENU</span></button>
       </div>
+      <div class="menu-toolbar reveal" data-restaurant-toolbar>
+        <div class="filter-tabs" role="group" aria-label="Filter restaurant menu">
+          <button class="filter-tab is-active" type="button" data-filter="all" aria-pressed="true">All favourites</button><button class="filter-tab" type="button" data-filter="veg" aria-pressed="false">Vegetarian</button><button class="filter-tab" type="button" data-filter="nonveg" aria-pressed="false">Non-vegetarian</button><button class="filter-tab" type="button" data-filter="bites" aria-pressed="false">Quick bites</button>
+        </div><span class="menu-note">PREVIEW MENU · DETAILS TO CONFIRM</span>
+      </div>
+      <div class="menu-panel is-active" data-menu-panel="restaurant">
       <div class="menu-grid">
         <article class="dish-card reveal" data-category="veg">
           <div class="dish-image"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=82" alt="Indian vegetarian meal served with rich curries" loading="lazy"><span class="dish-tag">VEGETARIAN</span></div>
@@ -90,18 +91,25 @@
         </article>
       </div>
 
-        <article class="dish-card reveal" data-category="veg"><div class="dish-image"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=82" alt="Paneer dish served with herbs and spices" loading="lazy"><span class="dish-tag">VEGETARIAN</span></div><div class="dish-meta"><div><h3>Tandoori Paneer Tikka</h3><p>Charred paneer, peppers, and a smoky house marinade.</p></div><span class="dish-price">₹250</span></div></article>
-        <article class="dish-card reveal" data-category="nonveg"><div class="dish-image"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=82" alt="Tandoori chicken served with fresh garnish" loading="lazy"><span class="dish-tag">NON-VEG</span></div><div class="dish-meta"><div><h3>Tandoori Chicken</h3><p>Smoky, spice-marinated chicken finished in the tandoor style.</p></div><span class="dish-price">₹320</span></div></article>
-        <article class="dish-card reveal" data-category="bites"><div class="dish-image"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=82" alt="Burger with a toasted bun and fresh filling" loading="lazy"><span class="dish-tag">FAST BITES</span></div><div class="dish-meta"><div><h3>Classic House Burger</h3><p>A toasted bun, crisp lettuce, and a satisfying house filling.</p></div><span class="dish-price">₹190</span></div></article>
-        <article class="dish-card reveal" data-category="veg"><div class="dish-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=82" alt="Fresh garden salad with colourful vegetables" loading="lazy"><span class="dish-tag">VEGETARIAN</span></div><div class="dish-meta"><div><h3>Garden Fresh Salad</h3><p>Seasonal greens, crunchy vegetables, and a bright dressing.</p></div><span class="dish-price">₹160</span></div></article>
-        <article class="dish-card reveal" data-category="bites"><div class="dish-image"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=82" alt="Crispy golden fries served as a snack" loading="lazy"><span class="dish-tag">FAST BITES</span></div><div class="dish-meta"><div><h3>Masala Fries</h3><p>Golden fries tossed with a savoury, gently spiced seasoning.</p></div><span class="dish-price">₹120</span></div></article>
 
 
 
 
 
-
-      <div class="menu-bottom reveal"><p>These are sample dishes for the first design preview. The final menu will reflect the restaurant's actual kitchen.</p><button class="button button-outline js-book" type="button">Book Now <span aria-hidden="true">↗</span></button></div>
+      <div class="menu-bottom reveal"><p>Sample dishes and prices are for design preview only. Final items and prices will be confirmed with the restaurant.</p><button class="button button-outline js-book" type="button">Book Now <span aria-hidden="true">↗</span></button></div>
+      </div>
+      <div class="menu-panel" data-menu-panel="bar" hidden>
+        <div class="bar-menu-grid">
+          <article class="bar-menu-card"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Citrus drink served over ice" loading="lazy"><div><span>01 · SIGNATURE SERVE</span><h3>Citrus Garden</h3><p>Bright citrus, botanical notes and a fresh finish.</p><strong>₹280 <small>· sample price</small></strong></div></article>
+          <article class="bar-menu-card"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Mint and lime cooler" loading="lazy"><div><span>02 · ZERO PROOF</span><h3>Mint &amp; Lime Cooler</h3><p>Fresh mint, lime and a clean, cooling finish.</p><strong>₹160 <small>· sample price</small></strong></div></article>
+          <article class="bar-menu-card"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Colourful house spritz" loading="lazy"><div><span>03 · HOUSE FAVOURITE</span><h3>House Spritz</h3><p>A sparkling, fruit-forward serve for slow evenings.</p><strong>₹320 <small>· sample price</small></strong></div></article>
+          <article class="bar-menu-card"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Craft drink prepared at a bar" loading="lazy"><div><span>04 · CLASSIC STYLE</span><h3>Classic Old Fashioned</h3><p>A rich, spirit-forward classic with a citrus aroma.</p><strong>₹380 <small>· sample price</small></strong></div></article>
+          <article class="bar-menu-card"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Fresh tropical drink" loading="lazy"><div><span>05 · REFRESHING</span><h3>Tropical Cooler</h3><p>Tropical fruit notes with a bright, refreshing finish.</p><strong>₹190 <small>· sample price</small></strong></div></article>
+          <article class="bar-menu-card"><img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Small bar snack served with a drink" loading="lazy"><div><span>06 · TO SHARE</span><h3>Bar Snack Platter</h3><p>A sample selection of crunchy, savoury bites.</p><strong>₹260 <small>· sample price</small></strong></div></article>
+        </div>
+        <p class="bar-menu-disclaimer">Illustrative menu only. Drinks, prices and availability must be confirmed. Alcohol service is subject to applicable local laws and age requirements.</p>
+        <div class="menu-bottom reveal"><p>Pick your mood. We’ll take care of the table.</p><button class="button button-gold js-book" type="button">Book Now <span aria-hidden="true">↗</span></button></div>
+      </div>
     </section>
 
     <section class="story-section" id="story">
@@ -133,16 +141,6 @@
     </section>
 
 
-    <section class="bar-section section" id="bar">
-      <div class="section-heading reveal"><div><p class="eyebrow"><span></span> THE BAR &amp; LOUNGE</p><h2>Good evenings, <em>well poured.</em></h2></div><p class="heading-note">A relaxed corner for after-work catch-ups, unhurried conversations, and a drink made to suit the mood.</p></div>
-      <div class="bar-intro reveal"><div class="bar-copy"><span class="bar-kicker">AFTER HOURS</span><h3>Stay for one<br><em>more story.</em></h3><p>Settle into a warmer side of the restaurant, with a considered bar atmosphere, classic pours, refreshing zero-proof options, and small plates to share.</p><p class="bar-note">Illustrative bar showcase only. Actual drinks, availability, and prices should be confirmed by the restaurant; alcohol service is subject to applicable local laws and age requirements.</p><button class="button button-gold js-book" type="button">Book Now <span aria-hidden="true">↗</span></button></div><div class="bar-feature-image"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=85" alt="An intimate bar and restaurant ambience with warm lighting" loading="lazy"><span>THE LOUNGE · YOUR EVENING, YOUR PACE</span></div></div>
-      <div class="bar-drinks">
-        <article class="bar-drink reveal"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&fit=crop&w=700&q=82" alt="A fresh citrus cocktail in a glass" loading="lazy"><div><span>01 · SIGNATURE STYLE</span><h3>Citrus Garden</h3><p>A bright citrus-led serve with a fresh, aromatic finish.</p></div></article>
-        <article class="bar-drink reveal"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=700&q=82" alt="A refreshing mint and lime drink" loading="lazy"><div><span>02 · ZERO PROOF</span><h3>Mint &amp; Lime Cooler</h3><p>Fresh mint, lime, and plenty of refreshment—without alcohol.</p></div></article>
-        <article class="bar-drink reveal"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=82" alt="A colourful crafted drink served over ice" loading="lazy"><div><span>03 · EVENING CLASSIC</span><h3>House Spritz</h3><p>A sparkling, fruit-forward style for slow evenings.</p></div></article>
-      </div>
-    </section>
-
 
 
 
@@ -155,14 +153,14 @@
 
     <section class="visit-section section" id="visit">
       <div class="visit-copy reveal">
-        <p class="eyebrow"><span></span> COME FIND YOUR TABLE</p>
-        <h2>Easy to find.<br><em>Hard to forget.</em></h2>
-        <p>We look forward to welcoming you to Sonbhadra. The exact address and opening hours will be added once confirmed.</p>
-        <div class="visit-detail"><span class="detail-icon">⌖</span><div><small>OUR LOCATION</small><strong>Sonbhadra, Uttar Pradesh, India</strong></div></div>
-        <div class="visit-detail"><span class="detail-icon">◷</span><div><small>OPENING HOURS</small><strong>Hours to be confirmed</strong></div></div>
-        <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&query=Sonbhadra%2C+Uttar+Pradesh" target="_blank" rel="noopener">Get directions <span aria-hidden="true">↗</span></a>
+        <p class="eyebrow"><span></span> YOUR NEXT GOOD EVENING</p>
+        <h2>Find your way<br><em>to the table.</em></h2>
+        <p>Come for a meal, stay for a drink—or make a whole evening of it. We’ll update this preview with the restaurant’s exact address before launch.</p>
+        <div class="visit-detail"><span class="detail-icon">⌖</span><div><small>TEMPORARY AREA · TO BE CONFIRMED</small><strong>Robertsganj, Sonbhadra, Uttar Pradesh</strong></div></div>
+        <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&query=Robertsganj%2C+Sonbhadra%2C+Uttar+Pradesh" target="_blank" rel="noopener">Open map <span aria-hidden="true">↗</span></a>
+        <p class="location-note">Approximate town-level location for this design preview. Not the confirmed restaurant address.</p>
       </div>
-      <div class="map-frame reveal"><iframe title="Map of Sonbhadra, Uttar Pradesh" src="https://maps.google.com/maps?q=Sonbhadra%2C%20Uttar%20Pradesh&t=&z=10&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><span class="map-label">SONBHADRA · UTTAR PRADESH</span></div>
+      <div class="map-frame reveal"><div class="map-frame-heading"><span>FIND US IN</span><strong>Robertsganj <em>·</em> Sonbhadra</strong><small>UTTAR PRADESH, INDIA</small></div><iframe title="Approximate map of Robertsganj, Sonbhadra" src="https://maps.google.com/maps?q=Robertsganj%2C%20Sonbhadra%2C%20Uttar%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><span class="map-label">APPROXIMATE AREA · NOT FINAL ADDRESS</span></div>
     </section>
   </main>
 
@@ -170,11 +168,11 @@
     <div class="footer-main">
       <a class="brand brand-footer" href="#top"><span class="brand-mark">S<span>R</span></span><span class="brand-copy"><strong>SONBHADRA</strong><small>RESTAURANT</small></span></a>
       <p>Thoughtful food.<br>Warm welcomes.<br>Room for everyone.</p>
-      <div class="footer-links"><strong>EXPLORE</strong><a href="#menu">The Menu</a><a href="about.html">Our Story</a><a href="kitchen.html">Our Kitchen</a><a href="team.html">People & Hospitality</a></div>
+      <div class="footer-links"><strong>EXPLORE</strong><a href="#menu">Restaurant Menu</a><a href="#menu" data-open-bar-menu>Bar Menu</a><a href="about.html">Our Story</a><a href="#visit">Find Us</a></div>
       <div class="footer-booking"><strong>YOUR TABLE IS CALLING</strong><p>Make your next meal a moment to remember.</p><button class="text-link text-link-light js-book" type="button">Book Now <span aria-hidden="true">↗</span></button></div>
     </div>
-    <div class="footer-bottom"><span>© <span data-year></span> SONBHADRA RESTAURANT</span><span>MADE FOR GOOD GATHERINGS</span><a href="#top">BACK TO TOP ↑</a></div>
-    <p class="demo-note">Website preview · Replace sample menu, photography, address, opening hours and contact details before launch.</p>
+    <div class="footer-bottom"><span>© <span data-year></span> SONBHADRA RESTAURANT &amp; BAR</span><span>MADE FOR GOOD GATHERINGS</span><a href="#top">BACK TO TOP ↑</a></div>
+    <p class="demo-note">Website preview · Sample menu, prices, photos and approximate location must be confirmed before launch.</p>
   </footer>
 
   <div class="booking-modal" id="booking-modal" aria-hidden="true">
