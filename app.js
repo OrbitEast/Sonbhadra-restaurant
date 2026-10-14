@@ -18,32 +18,93 @@
   var languageToggle = document.querySelector("[data-language-toggle]");
   var currentLanguage = "en";
   var originalTextNodes = new WeakMap();
+  var languageDustLayer = null;
+  function ensureLanguageDustLayer() {
+    if (languageDustLayer) return languageDustLayer;
+    languageDustLayer = document.createElement("div");
+    languageDustLayer.className = "language-dust-layer";
+    languageDustLayer.setAttribute("aria-hidden", "true");
+    document.body.appendChild(languageDustLayer);
+    return languageDustLayer;
+  }
+  function makeLanguageDust(rect) {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (document.hidden) return;
+    var layer = ensureLanguageDustLayer();
+    var count = Math.min(3, Math.max(1, Math.round(rect.width / 95)));
+    for (var i = 0; i < count; i++) {
+      var particle = document.createElement("i");
+      particle.className = "language-dust";
+      particle.style.left = (rect.left + Math.random() * Math.max(2, rect.width)) + "px";
+      particle.style.top = (rect.top + rect.height * (0.25 + Math.random() * 0.5)) + "px";
+      particle.style.setProperty("--dust-x", ((Math.random() - 0.5) * 34) + "px");
+      particle.style.setProperty("--dust-y", (-8 - Math.random() * 22) + "px");
+      particle.style.animationDelay = (Math.random() * 55) + "ms";
+      layer.appendChild(particle);
+      window.setTimeout(function (node) { if (node.parentNode) node.parentNode.removeChild(node); }, 520, particle);
+    }
+  }
   function translatePage(language) {
     currentLanguage = language === "hi" ? "hi" : "en";
+    var dictionary = currentLanguage === "hi" ? enToHi : null;
+    var keys = Object.keys(enToHi).sort(function (a, b) { return b.length - a.length; });
     var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     var nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
+    var changedParents = [];
+    var dustBudget = 0;
     nodes.forEach(function (node) {
       if (languageToggle && languageToggle.contains(node)) return;
+      var parent = node.parentElement;
+      if (!parent || /^(SCRIPT|STYLE|NOSCRIPT|TEXTAREA|OPTION)$/i.test(parent.tagName)) return;
+      if (parent.closest(".language-dust-layer, [data-no-translate]")) return;
       if (!originalTextNodes.has(node)) originalTextNodes.set(node, node.nodeValue);
       var original = originalTextNodes.get(node);
-      var trimmed = original.trim();
-      if (!trimmed) return;
-      var translated = currentLanguage === "hi" ? (enToHi[trimmed] || trimmed) : trimmed;
-      var startSpace = original.match(/^\s*/)[0];
-      var endSpace = original.match(/\s*$/)[0];
-      node.nodeValue = startSpace + translated + endSpace;
+      if (!original.trim()) return;
+      var translated = original;
+      if (currentLanguage === "hi") {
+        keys.forEach(function (key) {
+          if (translated.indexOf(key) !== -1) translated = translated.split(key).join(enToHi[key]);
+        });
+      }
+      if (node.nodeValue !== translated) {
+        if (dustBudget < 24 && parent.getBoundingClientRect) {
+          var rect = parent.getBoundingClientRect();
+          if (rect.width > 0 && rect.height > 0) {
+            makeLanguageDust(rect);
+            dustBudget += 1;
+          }
+        }
+        node.nodeValue = translated;
+        if (parent.classList && !parent.classList.contains("language-text-shift")) {
+          parent.classList.add("language-text-shift");
+          changedParents.push(parent);
+        }
+      }
+    });
+    changedParents.forEach(function (element) {
+      window.setTimeout(function () { element.classList.remove("language-text-shift"); }, 340);
     });
     document.documentElement.lang = currentLanguage === "hi" ? "hi" : "en";
     if (languageToggle) {
       languageToggle.textContent = currentLanguage === "hi" ? "English" : "हिन्दी";
       languageToggle.setAttribute("aria-label", currentLanguage === "hi" ? "Switch language to English" : "Switch language to Hindi");
       languageToggle.setAttribute("aria-pressed", String(currentLanguage === "hi"));
+      languageToggle.classList.remove("is-switching");
+      void languageToggle.offsetWidth;
+      languageToggle.classList.add("is-switching");
+      window.setTimeout(function () { languageToggle.classList.remove("is-switching"); }, 360);
     }
     document.querySelectorAll("[placeholder]").forEach(function (element) {
       if (!element.hasAttribute("data-original-placeholder")) element.setAttribute("data-original-placeholder", element.getAttribute("placeholder"));
       var originalPlaceholder = element.getAttribute("data-original-placeholder");
       element.setAttribute("placeholder", currentLanguage === "hi" ? (enToHi[originalPlaceholder] || originalPlaceholder) : originalPlaceholder);
+    });
+    document.querySelectorAll("[aria-label]").forEach(function (element) {
+      if (element === languageToggle) return;
+      if (!element.hasAttribute("data-original-aria-label")) element.setAttribute("data-original-aria-label", element.getAttribute("aria-label"));
+      var originalLabel = element.getAttribute("data-original-aria-label");
+      element.setAttribute("aria-label", currentLanguage === "hi" ? (enToHi[originalLabel] || originalLabel) : originalLabel);
     });
     var expander = document.querySelector(".menu-expand-button");
     if (expander) {
@@ -130,7 +191,7 @@
       var expanded = menuExpandButton.getAttribute("aria-expanded") === "true";
       menuExpandButton.setAttribute("aria-expanded", String(!expanded));
       menuExpandButton.classList.toggle("is-expanded", !expanded);
-      menuExpandButton.querySelector("span").textContent = currentLanguage === "hi" ? (expanded ? "पूरा मेन्यू देखें" : "कम दिखाएँ") : (expanded ? "VIEW FULL MENU" : "SHOW LESS");
+      menuExpandButton.querySelector("span").textContent = currentLanguage === "hi" ? (expanded ? "पूरा मेन्यू देखें" : "कम दिखाएँ") : (expanded ? "SHOW LESS" : "VIEW FULL MENU");
       menuExpandButton.querySelector("b").textContent = expanded ? "+" : "−";
       applyFilter(document.querySelector(".filter-tab.is-active")?.getAttribute("data-filter") || "all");
     });
