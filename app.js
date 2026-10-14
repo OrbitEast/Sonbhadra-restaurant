@@ -1,7 +1,7 @@
-/* Sonbhadra Restaurant prototype. Add the restaurant's WhatsApp number before launch. */
+/* Sonbhadra Restaurant: booking requests open directly in the restaurant WhatsApp chat. */
 (function () {
   "use strict";
-  var WHATSAPP_NUMBER = ""; // International digits only, e.g. 91XXXXXXXXXX. Keep blank for WhatsApp's recipient picker.
+  var WHATSAPP_NUMBER = "919181779995"; // India country code + the 10-digit number supplied for bookings.
   var header = document.querySelector(".site-header");
   var nav = document.querySelector(".main-nav");
   var toggle = document.querySelector(".menu-toggle");
@@ -92,7 +92,7 @@
       var destination = WHATSAPP_NUMBER ? "https://wa.me/" + WHATSAPP_NUMBER.replace(/\D/g, "") : "https://wa.me/";
       var whatsappUrl = destination + "?text=" + encodeURIComponent(message);
       closeModal();
-      showToast(WHATSAPP_NUMBER ? "Opening WhatsApp to send your reservation request…" : "Opening WhatsApp. Choose the restaurant chat to send your request.");
+      showToast(WHATSAPP_NUMBER ? "Opening WhatsApp to send your reservation request…" : "Opening the restaurant WhatsApp chat…");
       window.setTimeout(function () { window.location.href = whatsappUrl; }, 280);
     });
   }
