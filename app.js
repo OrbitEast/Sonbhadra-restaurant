@@ -12,118 +12,6 @@
   var lastFocused = null;
   var toastTimer;
 
-  // Privacy-friendly language preference: save only English/Hindi choice on this device.
-  var enToHi = {"GOOD FOOD · BIG CRAVINGS · GOOD TIMES":"अच्छा खाना · बड़ी क्रेविंग्स · अच्छे पल","SONBHADRA · UTTAR PRADESH":"सोनभद्र · उत्तर प्रदेश","Explore Menus":"मेन्यू देखें","Our Story":"हमारी कहानी","Gallery":"गैलरी","Find Us":"हमसे मिलें","Book a Table":"टेबल बुक करें","COME HUNGRY · LEAVE HAPPY":"भूख लेकर आएँ · खुश होकर जाएँ","Big flavours.":"ज़बरदस्त स्वाद।","Happy cravings.":"हर क्रेविंग का जवाब।","From satisfying food favourites and crispy bites to refreshing drinks, find something that hits the spot—then make a table of it.":"मनपसंद खाने और कुरकुरे स्नैक्स से लेकर ताज़ा ड्रिंक्स तक—अपनी पसंद चुनें और टेबल बुक करें।","Find your craving":"अपनी पसंद चुनें","01 — YOUR NEXT CRAVING STARTS HERE":"01 — आपकी अगली क्रेविंग यहीं से शुरू","SEE THE MENU":"मेन्यू देखें","COME":"आइए","HUNGRY":"भूख के साथ","& HAPPY":"और खुश होकर","Find your favourite":"अपनी पसंद चुनें","Indian meals, hearty plates & quick bites":"भारतीय भोजन, भरपूर प्लेटें और झटपट स्नैक्स","Something to sip":"कुछ ताज़ा पिएँ","Refreshing drinks and bar favourites":"ताज़ा ड्रिंक्स और बार की पसंद","Make it a meal":"इसे पूरा भोजन बनाएँ","Pick your dishes, then book a table":"डिश चुनें और टेबल बुक करें","WHAT SOUNDS GOOD?":"आज क्या खाने का मन है?","Something delicious":"कुछ स्वादिष्ट","is calling.":"आपको बुला रहा है।","Start with a dish you love, add a drink or two, and book a table when you’re ready.":"अपनी पसंद की डिश चुनें, साथ में ड्रिंक लें और तैयार हों तो टेबल बुक करें।","01 / THE KITCHEN":"01 / रसोई से","Restaurant Menu":"रेस्टोरेंट मेन्यू","Indian favourites, hearty plates & casual bites.":"भारतीय पसंदीदा डिश, भरपूर भोजन और हल्के स्नैक्स।","EXPLORE FOOD MENU":"खाने का मेन्यू देखें","02 / THE BAR":"02 / बार","Bar Menu":"बार मेन्यू","Signature drinks, refreshing coolers & small plates.":"खास ड्रिंक्स, ताज़ा कूलर्स और छोटी प्लेटें।","EXPLORE DRINKS MENU":"ड्रिंक्स का मेन्यू देखें","All favourites":"सभी पसंदीदा","Vegetarian":"शाकाहारी","Non-vegetarian":"मांसाहारी","Quick bites":"झटपट स्नैक्स","PREVIEW MENU · DETAILS TO CONFIRM":"मेन्यू प्रीव्यू · विवरण की पुष्टि बाकी","VEGETARIAN":"शाकाहारी","NON-VEG":"मांसाहारी","FAST BITES":"झटपट स्नैक्स","Silky tomato gravy, warming spices, a finish of cream.":"मुलायम टमाटर की ग्रेवी, खुशबूदार मसाले और क्रीम।","Slow-simmered comfort with a deep, aromatic masala.":"धीमी आँच पर पका मसालेदार और खुशबूदार स्वाद।","Crisp base, colourful toppings, and a generous melt.":"कुरकुरा बेस, रंगीन टॉपिंग और भरपूर चीज़।","A comforting spread of seasonal favourites and sides.":"मौसमी पसंदीदा डिश और साथ में स्वादिष्ट साइड्स।","Crunchy, savoury, and made for sharing at the table.":"कुरकुरे, चटपटे और सबके साथ बाँटकर खाने के लिए।","Toasted until golden, layered with a fresh, hearty filling.":"सुनहरा टोस्ट, ताज़ा और भरपूर फिलिंग के साथ।","Sample dishes and prices are for design preview only. Final items and prices will be confirmed with the restaurant.":"डिश और कीमतें केवल वेबसाइट प्रीव्यू के लिए हैं। अंतिम मेन्यू और कीमतों की पुष्टि रेस्टोरेंट से होगी।","01 · SIGNATURE SERVE":"01 · खास ड्रिंक","02 · ZERO PROOF":"02 · बिना अल्कोहल","03 · HOUSE FAVOURITE":"03 · हाउस फेवरेट","04 · CLASSIC STYLE":"04 · क्लासिक अंदाज़","05 · REFRESHING":"05 · ताज़गी भरा","06 · TO SHARE":"06 · सबके साथ बाँटें","Bright citrus, botanical notes and a fresh finish.":"सिट्रस की ताज़गी और हल्की हर्बल खुशबू।","Fresh mint, lime and a clean, cooling finish.":"ताज़ा पुदीना, नींबू और ठंडक भरा स्वाद।","A sparkling, fruit-forward serve for slow evenings.":"शाम के लिए फलदार और हल्का स्पार्कलिंग ड्रिंक।","A rich, spirit-forward classic with a citrus aroma.":"सिट्रस की खुशबू वाला क्लासिक ड्रिंक।","Tropical fruit notes with a bright, refreshing finish.":"ट्रॉपिकल फलों का स्वाद और ताज़गी भरा एहसास।","A sample selection of crunchy, savoury bites.":"कुरकुरे और चटपटे स्नैक्स का नमूना चयन।","· sample price":"· नमूना कीमत","Illustrative menu only. Drinks, prices and availability must be confirmed. Alcohol service is subject to applicable local laws and age requirements.":"यह केवल नमूना मेन्यू है। ड्रिंक्स, कीमत और उपलब्धता की पुष्टि बाकी है। अल्कोहल की बिक्री स्थानीय कानून और आयु-सीमा के अधीन है।","Pick your mood. We’ll take care of the table.":"अपना मूड चुनें, टेबल की तैयारी हम करेंगे।","THE ART OF MAKING ROOM":"आपका स्वागत, हमारी पहचान","SONBHADRA, INDIA":"सोनभद्र, भारत","A LITTLE ABOUT US":"हमारे बारे में","Come for the food.":"खाने के लिए आइए।","Stay for the feeling.":"यादगार एहसास लेकर जाइए।","The best meals bring people together. Pick a favourite, order something new for the table, and settle in for good food and easy conversation.":"अच्छा खाना लोगों को साथ लाता है। अपनी पसंद चुनें, कुछ नया ऑर्डर करें और स्वादिष्ट खाने व अच्छी बातचीत का आनंद लें।","Sonbhadra Restaurant brings the menu, the drinks and the company together in one welcoming place.":"सोनभद्र रेस्टोरेंट में स्वादिष्ट भोजन, ड्रिंक्स और अपनों के साथ बिताए पल एक जगह मिलते हैं।","Get to know us":"हमारे बारे में जानें","LOOKS GOOD. TASTES BETTER.":"दिखने में शानदार, स्वाद में बेहतरीन।","Which one are you":"आप किस चीज़ के","craving?":"दीवाने हैं?","A preview of the kind of food and moments this website is designed to celebrate.":"यह वेबसाइट खाने और साथ बिताए अच्छे पलों की एक झलक दिखाती है।","THE FIRST BITE":"पहला निवाला","FRESHLY MADE":"ताज़ा तैयार","MADE TO SHARE":"सबके साथ बाँटें","Preview photography only. Actual restaurant photos can be added before launch.":"ये केवल प्रीव्यू तस्वीरें हैं। लॉन्च से पहले रेस्टोरेंट की असली तस्वीरें जोड़ी जा सकती हैं।","GOOD FOOD IS BETTER TOGETHER":"अच्छा खाना, अपनों के साथ और बेहतर","Got a craving?":"कुछ स्वादिष्ट खाने का मन है?","Make a plan.":"तो प्लान बनाइए।","Lunch, dinner or an evening with your favourite people—choose your moment and reserve a table for it.":"लंच, डिनर या अपनों के साथ शाम—अपना समय चुनें और टेबल रिज़र्व करें।","A BETTER KIND OF GATHERING · 02":"बेहतरीन साथ · 02","YOUR NEXT GOOD EVENING":"आपकी अगली यादगार शाम","Find your way":"अपना रास्ता खोजें","to the table.":"अपनी टेबल तक।","Come for a meal, stay for a drink—or make a whole evening of it. Tap below for directions. We’ll replace this temporary area with the restaurant’s exact Google Maps link before launch.":"खाने के लिए आएँ, ड्रिंक के साथ रुकें या पूरी शाम बिताएँ। रास्ता देखने के लिए नीचे टैप करें। सही लोकेशन मिलने पर यह अस्थायी लिंक बदला जाएगा।","TEMPORARY AREA · TO BE CONFIRMED":"अस्थायी क्षेत्र · पुष्टि बाकी","Robertsganj, Sonbhadra, Uttar Pradesh":"रॉबर्ट्सगंज, सोनभद्र, उत्तर प्रदेश","Get Directions":"रास्ता देखें","This opens Google Maps for an approximate town-level destination, not the restaurant’s verified address.":"यह Google Maps पर शहर की अनुमानित लोकेशन खोलेगा, रेस्टोरेंट का सत्यापित पता नहीं।","OPEN IN GOOGLE MAPS":"GOOGLE MAPS में खोलें","Robertsganj":"रॉबर्ट्सगंज","UTTAR PRADESH, INDIA":"उत्तर प्रदेश, भारत","GET DIRECTIONS":"रास्ता देखें","RESTAURANT & BAR":"रेस्टोरेंट और बार","Thoughtful food.":"स्वादिष्ट भोजन।","Warm welcomes.":"दिल से स्वागत।","Room for everyone.":"सबके लिए जगह।","EXPLORE":"एक्सप्लोर करें","ORDER ONLINE":"ऑनलाइन ऑर्डर","Search on Zomato ↗":"Zomato पर खोजें ↗","Search on Swiggy ↗":"Swiggy पर खोजें ↗","CONTACT & VISIT":"संपर्क और लोकेशन","Phone / WhatsApp":"फोन / WhatsApp","To be confirmed":"पुष्टि बाकी","Address":"पता","Temporary area only":"अस्थायी लोकेशन","Opening hours":"खुलने का समय","Get directions ↗":"रास्ता देखें ↗","YOUR TABLE IS CALLING":"आपकी टेबल आपका इंतज़ार कर रही है","Make your next meal a moment to remember.":"अपने अगले भोजन को यादगार पल बनाएँ。","MADE FOR GOOD GATHERINGS":"अच्छे पलों के लिए बनाया गया","BACK TO TOP ↑":"ऊपर जाएँ ↑","Website preview · Sample menu, prices, photos and approximate location must be confirmed before launch.":"वेबसाइट प्रीव्यू · लॉन्च से पहले मेन्यू, कीमत, तस्वीरों और लोकेशन की पुष्टि ज़रूरी है।","A PLACE FOR YOU":"आपके लिए एक जगह","Let's save you":"आइए, आपके लिए","a table.":"टेबल बुक करें।","Share a few details. We'll prepare a WhatsApp message for the restaurant so you can confirm your reservation directly.":"कुछ जानकारी भरें। हम रेस्टोरेंट के लिए WhatsApp संदेश तैयार करेंगे ताकि आप सीधे बुकिंग की पुष्टि कर सकें।","Your name":"आपका नाम","Phone number":"फोन नंबर","Date":"तारीख","Preferred time":"पसंदीदा समय","Choose a time":"समय चुनें","12:00 PM":"दोपहर 12:00","12:30 PM":"दोपहर 12:30","1:00 PM":"दोपहर 1:00","1:30 PM":"दोपहर 1:30","2:00 PM":"दोपहर 2:00","6:00 PM":"शाम 6:00","6:30 PM":"शाम 6:30","7:00 PM":"शाम 7:00","7:30 PM":"शाम 7:30","8:00 PM":"रात 8:00","8:30 PM":"रात 8:30","9:00 PM":"रात 9:00","Number of guests":"मेहमानों की संख्या","1 guest":"1 मेहमान","2 guests":"2 मेहमान","3 guests":"3 मेहमान","4 guests":"4 मेहमान","5 guests":"5 मेहमान","6 guests":"6 मेहमान","7 guests":"7 मेहमान","8 guests":"8 मेहमान","9 guests":"9 मेहमान","10 guests":"10 मेहमान","Send on WhatsApp":"WhatsApp पर भेजें","Your booking is confirmed directly with the restaurant on WhatsApp.":"आपकी बुकिंग की पुष्टि रेस्टोरेंट WhatsApp पर सीधे करेगा।","Let's find you a seat.":"आइए, आपके लिए सीट ढूँढें।","Book Now":"अभी बुक करें","The Menu":"मेन्यू","DINING · BAR · GOOD COMPANY.":"डाइनिंग · बार · अच्छा साथ","Switch language to Hindi":"भाषा हिंदी में बदलें","Switch language to English":"भाषा अंग्रेज़ी में बदलें","OUR STORY":"हमारी कहानी","Hospitality should feel":"मेहमाननवाज़ी ऐसी होनी चाहिए","like being remembered.":"जैसे कोई आपको याद रखता हो।","The best restaurants do more than serve a meal. They create the kind of place where conversation comes easily, another plate is always welcome, and everyone feels they belong.":"अच्छे रेस्टोरेंट सिर्फ खाना नहीं परोसते। वे ऐसी जगह बनाते हैं जहाँ बातचीत सहज हो, एक और प्लेट का हमेशा स्वागत हो और हर व्यक्ति अपनापन महसूस करे।","THE IDEA BEHIND THE TABLE":"इस टेबल के पीछे का विचार","Food brings us together.":"खाना हमें साथ लाता है।","The feeling brings us back.":"अच्छा एहसास हमें वापस लाता है।","Sonbhadra Restaurant is being shaped around a simple promise: make the everyday feel a little more considered. From a meal with family to a catch-up that runs longer than planned, the experience should feel warm, thoughtful, and genuinely welcoming.":"सोनभद्र रेस्टोरेंट एक सरल वादे के साथ तैयार हो रहा है: रोज़मर्रा के पलों को थोड़ा खास बनाना। परिवार के साथ भोजन हो या दोस्तों से लंबी बातचीत—हर अनुभव अपनापन और सच्चा स्वागत महसूस कराए।","Our menu preview brings together familiar favourites, comforting Indian flavours, and casual bites. The final dishes, ingredients, and prices will be added once the restaurant's actual menu is confirmed.":"हमारे मेन्यू प्रीव्यू में पसंदीदा डिश, भारतीय स्वाद और हल्के स्नैक्स शामिल हैं। रेस्टोरेंट का असली मेन्यू तय होने पर अंतिम डिश, सामग्री और कीमतें जोड़ी जाएँगी।","We're building the details carefully, so the website reflects the real place—not an imagined one.":"हम हर जानकारी ध्यान से तैयार कर रहे हैं, ताकि वेबसाइट असली रेस्टोरेंट को दिखाए—कल्पना को नहीं।","A table for every kind of occasion.":"हर मौके के लिए एक टेबल।","A relaxed lunch, a family dinner, or a reason to celebrate. Let's find you a seat.":"आराम से लंच, परिवार के साथ डिनर या जश्न का मौका—आइए, आपके लिए सीट ढूँढें।","Website preview · Replace sample menu, photography, address, opening hours and contact details before launch.":"वेबसाइट प्रीव्यू · लॉन्च से पहले नमूना मेन्यू, तस्वीरें, पता, खुलने का समय और संपर्क जानकारी अपडेट करनी होगी।","Full name":"पूरा नाम","Enter a valid phone number":"कृपया सही फोन नंबर दर्ज करें"};
-  var hiToEn = Object.keys(enToHi).reduce(function (out, key) { out[enToHi[key]] = key; return out; }, {}) = Object.keys(enToHi).reduce(function (out, key) { out[enToHi[key]] = key; return out; }, {});
-  var languageToggle = document.querySelector("[data-language-toggle]");
-  var currentLanguage = "en";
-  var originalTextNodes = new WeakMap();
-  var languageDustLayer = null;
-  function ensureLanguageDustLayer() {
-    if (languageDustLayer) return languageDustLayer;
-    languageDustLayer = document.createElement("div");
-    languageDustLayer.className = "language-dust-layer";
-    languageDustLayer.setAttribute("aria-hidden", "true");
-    document.body.appendChild(languageDustLayer);
-    return languageDustLayer;
-  }
-  function makeLanguageDust(rect) {
-    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    if (document.hidden) return;
-    var layer = ensureLanguageDustLayer();
-    var count = Math.min(3, Math.max(1, Math.round(rect.width / 95)));
-    for (var i = 0; i < count; i++) {
-      var particle = document.createElement("i");
-      particle.className = "language-dust";
-      particle.style.left = (rect.left + Math.random() * Math.max(2, rect.width)) + "px";
-      particle.style.top = (rect.top + rect.height * (0.25 + Math.random() * 0.5)) + "px";
-      particle.style.setProperty("--dust-x", ((Math.random() - 0.5) * 34) + "px");
-      particle.style.setProperty("--dust-y", (-8 - Math.random() * 22) + "px");
-      particle.style.animationDelay = (Math.random() * 55) + "ms";
-      layer.appendChild(particle);
-      window.setTimeout(function (node) { if (node.parentNode) node.parentNode.removeChild(node); }, 520, particle);
-    }
-  }
-  function translatePage(language) {
-    currentLanguage = language === "hi" ? "hi" : "en";
-    var dictionary = currentLanguage === "hi" ? enToHi : null;
-    var keys = Object.keys(enToHi).sort(function (a, b) { return b.length - a.length; });
-    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-    var nodes = [];
-    while (walker.nextNode()) nodes.push(walker.currentNode);
-    var changedParents = [];
-    var dustBudget = 0;
-    nodes.forEach(function (node) {
-      if (languageToggle && languageToggle.contains(node)) return;
-      var parent = node.parentElement;
-      if (!parent || /^(SCRIPT|STYLE|NOSCRIPT|TEXTAREA|OPTION)$/i.test(parent.tagName)) return;
-      if (parent.closest(".language-dust-layer, [data-no-translate]")) return;
-      if (!originalTextNodes.has(node)) originalTextNodes.set(node, node.nodeValue);
-      var original = originalTextNodes.get(node);
-      if (!original.trim()) return;
-      var translated = original;
-      if (currentLanguage === "hi") {
-        keys.forEach(function (key) {
-          if (translated.indexOf(key) !== -1) translated = translated.split(key).join(enToHi[key]);
-        });
-      }
-      if (node.nodeValue !== translated) {
-        if (dustBudget < 24 && parent.getBoundingClientRect) {
-          var rect = parent.getBoundingClientRect();
-          if (rect.width > 0 && rect.height > 0) {
-            makeLanguageDust(rect);
-            dustBudget += 1;
-          }
-        }
-        node.nodeValue = translated;
-        if (parent.classList && !parent.classList.contains("language-text-shift")) {
-          parent.classList.add("language-text-shift");
-          changedParents.push(parent);
-        }
-      }
-    });
-    changedParents.forEach(function (element) {
-      window.setTimeout(function () { element.classList.remove("language-text-shift"); }, 340);
-    });
-    document.documentElement.lang = currentLanguage === "hi" ? "hi" : "en";
-    if (languageToggle) {
-      languageToggle.textContent = currentLanguage === "hi" ? "English" : "हिन्दी";
-      languageToggle.setAttribute("aria-label", currentLanguage === "hi" ? "Switch language to English" : "Switch language to Hindi");
-      languageToggle.setAttribute("aria-pressed", String(currentLanguage === "hi"));
-      languageToggle.classList.remove("is-switching");
-      void languageToggle.offsetWidth;
-      languageToggle.classList.add("is-switching");
-      window.setTimeout(function () { languageToggle.classList.remove("is-switching"); }, 360);
-    }
-    document.querySelectorAll("[placeholder]").forEach(function (element) {
-      if (!element.hasAttribute("data-original-placeholder")) element.setAttribute("data-original-placeholder", element.getAttribute("placeholder"));
-      var originalPlaceholder = element.getAttribute("data-original-placeholder");
-      element.setAttribute("placeholder", currentLanguage === "hi" ? (enToHi[originalPlaceholder] || originalPlaceholder) : originalPlaceholder);
-    });
-    document.querySelectorAll("[aria-label]").forEach(function (element) {
-      if (element === languageToggle) return;
-      if (!element.hasAttribute("data-original-aria-label")) element.setAttribute("data-original-aria-label", element.getAttribute("aria-label"));
-      var originalLabel = element.getAttribute("data-original-aria-label");
-      element.setAttribute("aria-label", currentLanguage === "hi" ? (enToHi[originalLabel] || originalLabel) : originalLabel);
-    });
-    var expander = document.querySelector(".menu-expand-button");
-    if (expander) {
-      var expanded = expander.getAttribute("aria-expanded") === "true";
-      expander.querySelector("span").textContent = currentLanguage === "hi" ? (expanded ? "कम दिखाएँ" : "पूरा मेन्यू देखें") : (expanded ? "SHOW LESS" : "VIEW FULL MENU");
-    }
-  }
-  try {
-    var savedLanguage = window.localStorage.getItem("sonbhadra-language");
-    currentLanguage = savedLanguage === "hi" || savedLanguage === "en" ? savedLanguage : ((navigator.language || "").toLowerCase().startsWith("hi") ? "hi" : "en");
-  } catch (error) {
-    currentLanguage = ((navigator.language || "").toLowerCase().startsWith("hi") ? "hi" : "en");
-  }
-  if (languageToggle) languageToggle.addEventListener("click", function () {
-    currentLanguage = currentLanguage === "hi" ? "en" : "hi";
-    try { window.localStorage.setItem("sonbhadra-language", currentLanguage); } catch (error) {}
-    translatePage(currentLanguage);
-  });
-
   document.querySelectorAll("[data-year]").forEach(function (node) { node.textContent = new Date().getFullYear(); });
   function localDateString(date) {
     var y = date.getFullYear(); var m = String(date.getMonth() + 1).padStart(2, "0"); var d = String(date.getDate()).padStart(2, "0");
@@ -191,7 +79,7 @@
       var expanded = menuExpandButton.getAttribute("aria-expanded") === "true";
       menuExpandButton.setAttribute("aria-expanded", String(!expanded));
       menuExpandButton.classList.toggle("is-expanded", !expanded);
-      menuExpandButton.querySelector("span").textContent = currentLanguage === "hi" ? (expanded ? "पूरा मेन्यू देखें" : "कम दिखाएँ") : (expanded ? "SHOW LESS" : "VIEW FULL MENU");
+      menuExpandButton.querySelector("span").textContent = expanded ? "VIEW FULL MENU" : "SHOW LESS";
       menuExpandButton.querySelector("b").textContent = expanded ? "+" : "−";
       applyFilter(document.querySelector(".filter-tab.is-active")?.getAttribute("data-filter") || "all");
     });
@@ -217,7 +105,7 @@
     if (restaurantToolbar) restaurantToolbar.hidden = name !== "restaurant";
     if (name === "restaurant") {
       filterButtons.forEach(function (button) { var selected = button.getAttribute("data-filter") === "all"; button.classList.toggle("is-active", selected); button.setAttribute("aria-pressed", String(selected)); });
-      if (menuExpandButton) { menuExpandButton.setAttribute("aria-expanded", "false"); menuExpandButton.classList.remove("is-expanded"); menuExpandButton.querySelector("span").textContent = currentLanguage === "hi" ? "पूरा मेन्यू देखें" : "VIEW FULL MENU"; menuExpandButton.querySelector("b").textContent = "+"; }
+      if (menuExpandButton) { menuExpandButton.setAttribute("aria-expanded", "false"); menuExpandButton.classList.remove("is-expanded"); menuExpandButton.querySelector("span").textContent = "VIEW FULL MENU"; menuExpandButton.querySelector("b").textContent = "+"; }
       applyFilter("all");
     }
   }
@@ -232,5 +120,4 @@
     });
   });
   applyFilter("all");
-  translatePage(currentLanguage);
 })();
