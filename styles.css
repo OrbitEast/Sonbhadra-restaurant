@@ -77,3 +77,27 @@
 @media(max-width:900px){.menu-choice{min-height:225px;padding:24px}.bar-menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.visit-section{grid-template-columns:1fr 1.1fr;gap:28px}.map-frame{height:390px}}
 @media(max-width:620px){.menu-choice-grid{grid-template-columns:1fr;gap:12px;margin-bottom:27px}.menu-choice{min-height:205px;padding:23px}.menu-choice-title{font-size:31px}.bar-menu-grid{grid-template-columns:1fr 1fr;gap:12px}.bar-menu-card>img{height:145px}.bar-menu-card>div{padding:13px}.bar-menu-card h3{font-size:18px}.bar-menu-card p{font-size:9px;min-height:52px}.bar-menu-card strong{font-size:16px}.bar-menu-card strong small{font-size:8px}.visit-section{grid-template-columns:1fr;gap:27px}.map-frame{height:330px}.map-frame-heading{top:12px;left:12px;right:12px;padding:12px 14px}.map-frame-heading strong{font-size:21px}.map-label{left:12px;bottom:12px;font-size:7px}.location-note{max-width:none}}
 @media(prefers-reduced-motion:reduce){.menu-choice:before,.bar-menu-card,.menu-panel{animation:none;transition:none}}
+
+
+/* Location: replace the embedded map preview with a clean directions card. */
+.visit-section{align-items:stretch}
+.directions-card{min-height:340px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;overflow:hidden;padding:clamp(25px,4vw,46px);color:#f7f0e4;background:linear-gradient(145deg,#26392e,#18251e 72%);text-decoration:none;border:1px solid #cbb58f;box-shadow:0 22px 55px #18251e14;transition:transform .25s,box-shadow .25s}
+.directions-card:before{content:"⌖";position:absolute;right:clamp(25px,5vw,55px);top:15px;font:200px/1 var(--serif);color:#e7d7b5;opacity:.09;transform:rotate(-12deg)}
+.directions-card:hover{transform:translateY(-4px);box-shadow:0 28px 65px #18251e22}
+.directions-card-icon{position:absolute;right:28px;top:25px;width:40px;height:40px;display:grid;place-items:center;border:1px solid #d8c49c;border-radius:50%;color:#e8d6ad;font-size:18px}
+.directions-kicker,.directions-card-meta{font-size:8px;letter-spacing:.2em;color:#d3c5a7}
+.directions-card>strong{font:500 clamp(31px,4vw,46px)/1.15 var(--serif);letter-spacing:-.035em;margin:14px 0 8px}
+.directions-card>strong em{font-style:normal;color:#d7b47d}
+.directions-card-rule{height:1px;width:100%;background:#ffffff32;margin:25px 0 18px}
+.directions-card-link{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;font-size:9px;letter-spacing:.16em;color:#f4e8d0}
+.directions-card-link b{font-size:18px;font-weight:400;color:#e0bd80}
+.footer-contact{display:flex;flex-direction:column;gap:14px;min-width:160px}
+.footer-contact>strong{font-size:9px;letter-spacing:.16em;color:#d5b987}
+.footer-contact p{display:flex;flex-direction:column;gap:4px;margin:0}
+.footer-contact p span{font-size:8px;letter-spacing:.12em;color:#a9aa9e;text-transform:uppercase}
+.footer-contact p b{font-size:10px;line-height:1.6;color:#f2eee4;font-weight:400}
+.footer-contact p b small{display:block;color:#a9aa9e;font-size:8px}
+.footer-contact>a{font-size:9px;color:#dfc18c;text-decoration:none;margin-top:3px}
+.footer-contact>a:hover{text-decoration:underline}
+@media(max-width:900px){.directions-card{min-height:300px}}
+@media(max-width:620px){.directions-card{min-height:270px;padding:25px}.directions-card:before{font-size:160px}.footer-contact{gap:12px}}
