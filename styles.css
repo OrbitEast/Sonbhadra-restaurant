@@ -494,3 +494,6 @@ h1 em,h2 em{font-weight:900;font-style:normal;color:#c33725}
   .brand-copy small{font-size:7px;letter-spacing:.19em;gap:4px}
 }
 @media(prefers-reduced-motion:reduce){.brand-mark,.brand:hover .brand-mark{transition:none;transform:none}}
+
+/* Language control removed from the header. */
+.language-toggle,.language-dust-layer,.language-dust,.language-text-shift{display:none!important}
