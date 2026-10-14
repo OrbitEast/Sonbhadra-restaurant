@@ -13,7 +13,7 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="topline"><span>GOOD FOOD. GOOD COMPANY.</span><span class="topline-right">SONBHADRA · UTTAR PRADESH</span></div>
+  <div class="topline"><span>DINING · BAR · GOOD COMPANY.</span><span class="topline-right">SONBHADRA · UTTAR PRADESH</span></div>
   <header class="site-header" id="top">
     <a class="brand" href="index.html" aria-label="Sonbhadra Restaurant home">
       <span class="brand-mark">S<span>R</span></span>
@@ -21,8 +21,8 @@
     </a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="#menu">The Menu</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#visit">Find Us</a>
-      <button class="button button-small button-gold js-book" type="button">Reserve a Table <span aria-hidden="true">↗</span></button>
+      <a href="#menu">The Menu</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#bar">Bar &amp; Lounge</a><a href="#visit">Find Us</a>
+      <button class="button button-small button-gold js-book" type="button">Book Now <span aria-hidden="true">↗</span></button>
     </nav>
   </header>
 
@@ -35,7 +35,7 @@
         <h1 id="hero-title">Come for the food.<br><em>Stay for the feeling.</em></h1>
         <p class="hero-lede">Thoughtful flavours, warm hospitality, and a table that always feels like yours.</p>
         <div class="hero-actions">
-          <button class="button button-gold js-book" type="button">Reserve your table <span aria-hidden="true">↗</span></button>
+          <button class="button button-gold js-book" type="button">Book Now <span aria-hidden="true">↗</span></button>
           <a class="text-link text-link-light" href="#menu">Explore the menu <span aria-hidden="true">↓</span></a>
         </div>
       </div>
@@ -89,7 +89,13 @@
           <div class="dish-meta"><div><h3>Grilled House Sandwich</h3><p>Toasted until golden, layered with a fresh, hearty filling.</p></div><span class="dish-price">₹180</span></div>
         </article>
       </div>
-      <div class="menu-bottom reveal"><p>These are sample dishes for the first design preview. The final menu will reflect the restaurant's actual kitchen.</p><button class="button button-outline js-book" type="button">Plan your visit <span aria-hidden="true">↗</span></button></div>
+
+        <article class="dish-card reveal" data-category="veg"><div class="dish-image"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=82" alt="Paneer dish served with herbs and spices" loading="lazy"><span class="dish-tag">VEGETARIAN</span></div><div class="dish-meta"><div><h3>Tandoori Paneer Tikka</h3><p>Charred paneer, peppers, and a smoky house marinade.</p></div><span class="dish-price">₹250</span></div></article>
+        <article class="dish-card reveal" data-category="nonveg"><div class="dish-image"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=82" alt="Tandoori chicken served with fresh garnish" loading="lazy"><span class="dish-tag">NON-VEG</span></div><div class="dish-meta"><div><h3>Tandoori Chicken</h3><p>Smoky, spice-marinated chicken finished in the tandoor style.</p></div><span class="dish-price">₹320</span></div></article>
+        <article class="dish-card reveal" data-category="bites"><div class="dish-image"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=82" alt="Burger with a toasted bun and fresh filling" loading="lazy"><span class="dish-tag">FAST BITES</span></div><div class="dish-meta"><div><h3>Classic House Burger</h3><p>A toasted bun, crisp lettuce, and a satisfying house filling.</p></div><span class="dish-price">₹190</span></div></article>
+        <article class="dish-card reveal" data-category="veg"><div class="dish-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=82" alt="Fresh garden salad with colourful vegetables" loading="lazy"><span class="dish-tag">VEGETARIAN</span></div><div class="dish-meta"><div><h3>Garden Fresh Salad</h3><p>Seasonal greens, crunchy vegetables, and a bright dressing.</p></div><span class="dish-price">₹160</span></div></article>
+        <article class="dish-card reveal" data-category="bites"><div class="dish-image"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=82" alt="Crispy golden fries served as a snack" loading="lazy"><span class="dish-tag">FAST BITES</span></div><div class="dish-meta"><div><h3>Masala Fries</h3><p>Golden fries tossed with a savoury, gently spiced seasoning.</p></div><span class="dish-price">₹120</span></div></article>
+      <div class="menu-bottom reveal"><p>These are sample dishes for the first design preview. The final menu will reflect the restaurant's actual kitchen.</p><button class="button button-outline js-book" type="button">Book Now <span aria-hidden="true">↗</span></button></div>
     </section>
 
     <section class="story-section" id="story">
@@ -120,10 +126,21 @@
       <p class="gallery-disclaimer">Preview photography only. Actual restaurant photos can be added before launch.</p>
     </section>
 
+
+    <section class="bar-section section" id="bar">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span></span> THE BAR &amp; LOUNGE</p><h2>Good evenings, <em>well poured.</em></h2></div><p class="heading-note">A relaxed corner for after-work catch-ups, unhurried conversations, and a drink made to suit the mood.</p></div>
+      <div class="bar-intro reveal"><div class="bar-copy"><span class="bar-kicker">AFTER HOURS</span><h3>Stay for one<br><em>more story.</em></h3><p>Settle into a warmer side of the restaurant, with a considered bar atmosphere, classic pours, refreshing zero-proof options, and small plates to share.</p><p class="bar-note">Illustrative bar showcase only. Actual drinks, availability, and prices should be confirmed by the restaurant; alcohol service is subject to applicable local laws and age requirements.</p><button class="button button-gold js-book" type="button">Book Now <span aria-hidden="true">↗</span></button></div><div class="bar-feature-image"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=85" alt="An intimate bar and restaurant ambience with warm lighting" loading="lazy"><span>THE LOUNGE · YOUR EVENING, YOUR PACE</span></div></div>
+      <div class="bar-drinks">
+        <article class="bar-drink reveal"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&fit=crop&w=700&q=82" alt="A fresh citrus cocktail in a glass" loading="lazy"><div><span>01 · SIGNATURE STYLE</span><h3>Citrus Garden</h3><p>A bright citrus-led serve with a fresh, aromatic finish.</p></div></article>
+        <article class="bar-drink reveal"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=700&q=82" alt="A refreshing mint and lime drink" loading="lazy"><div><span>02 · ZERO PROOF</span><h3>Mint &amp; Lime Cooler</h3><p>Fresh mint, lime, and plenty of refreshment—without alcohol.</p></div></article>
+        <article class="bar-drink reveal"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=82" alt="A colourful crafted drink served over ice" loading="lazy"><div><span>03 · EVENING CLASSIC</span><h3>House Spritz</h3><p>A sparkling, fruit-forward style for slow evenings.</p></div></article>
+      </div>
+    </section>
+
     <section class="experience-band">
       <div class="experience-image"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1500&q=85" alt="Evening restaurant ambience with warm lights" loading="lazy"></div>
       <div class="experience-overlay"></div>
-      <div class="experience-copy reveal"><p class="eyebrow eyebrow-light"><span></span> MAKE A MOMENT OF IT</p><h2>Your seat is<br><em>waiting.</em></h2><p>Birthday dinner, an unhurried lunch, or an evening with your favourite people. Start with a reservation and let the rest take shape.</p><button class="button button-gold js-book" type="button">Book your table <span aria-hidden="true">↗</span></button></div>
+      <div class="experience-copy reveal"><p class="eyebrow eyebrow-light"><span></span> MAKE A MOMENT OF IT</p><h2>Your seat is<br><em>waiting.</em></h2><p>Birthday dinner, an unhurried lunch, or an evening with your favourite people. Start with a reservation and let the rest take shape.</p><button class="button button-gold js-book" type="button">Book Now <span aria-hidden="true">↗</span></button></div>
       <div class="experience-index">A BETTER KIND OF GATHERING · 02</div>
     </section>
 
@@ -145,7 +162,7 @@
       <a class="brand brand-footer" href="#top"><span class="brand-mark">S<span>R</span></span><span class="brand-copy"><strong>SONBHADRA</strong><small>RESTAURANT</small></span></a>
       <p>Thoughtful food.<br>Warm welcomes.<br>Room for everyone.</p>
       <div class="footer-links"><strong>EXPLORE</strong><a href="#menu">The Menu</a><a href="about.html">Our Story</a><a href="kitchen.html">Our Kitchen</a><a href="team.html">People & Hospitality</a></div>
-      <div class="footer-booking"><strong>YOUR TABLE IS CALLING</strong><p>Make your next meal a moment to remember.</p><button class="text-link text-link-light js-book" type="button">Reserve a table <span aria-hidden="true">↗</span></button></div>
+      <div class="footer-booking"><strong>YOUR TABLE IS CALLING</strong><p>Make your next meal a moment to remember.</p><button class="text-link text-link-light js-book" type="button">Book Now <span aria-hidden="true">↗</span></button></div>
     </div>
     <div class="footer-bottom"><span>© <span data-year></span> SONBHADRA RESTAURANT</span><span>MADE FOR GOOD GATHERINGS</span><a href="#top">BACK TO TOP ↑</a></div>
     <p class="demo-note">Website preview · Replace sample menu, photography, address, opening hours and contact details before launch.</p>
@@ -162,7 +179,7 @@
         <div class="form-row"><label>Your name<input name="guestName" type="text" autocomplete="name" placeholder="Full name" required maxlength="80"></label><label>Phone number<input name="guestPhone" type="tel" autocomplete="tel" placeholder="+91 ..." required maxlength="18" pattern="[+0-9 ()-]{7,18}" title="Enter a valid phone number"></label></div>
         <div class="form-row"><label>Date<input name="date" id="booking-date" type="date" required></label><label>Preferred time<select name="time" required><option value="">Choose a time</option><option>12:00 PM</option><option>12:30 PM</option><option>1:00 PM</option><option>1:30 PM</option><option>2:00 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option></select></label></div>
         <label>Number of guests<select name="guests" required><option value="1">1 guest</option><option value="2" selected>2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option><option value="7">7 guests</option><option value="8">8 guests</option><option value="9">9 guests</option><option value="10">10 guests</option></select></label>
-        <button class="button button-dark form-submit" type="submit">Continue to WhatsApp <span aria-hidden="true">↗</span></button>
+        <button class="button button-dark form-submit" type="submit">Send on WhatsApp <span aria-hidden="true">↗</span></button>
         <p class="form-footnote">Your booking is confirmed directly with the restaurant on WhatsApp.</p>
       </form>
     </section>
